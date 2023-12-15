@@ -1,0 +1,29 @@
+<mvc:View xmlns:layout="sap.ui.layout" xmlns:u="sap.ui.unified" xmlns:semantic="sap.f.semantic" xmlns:f="sap.f" controllerName="project1.controller.Overview"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+     <f:DynamicPage id="SemanticScannPage" preserveHeaderStateOnScroll="true" toggleHeaderOnTitleClick="false" showFooter="true">
+        <f:title/>
+        <f:header>
+            <f:DynamicPageHeader pinnable="false">
+               <f:content>
+                    <FlexBox alignItems="Center" alignContent="Inherit" justifyContent="SpaceBetween">
+                        <layout:HorizontalLayout busyIndicatorSize="Small" allowWrapping="true">
+                            <layout:VerticalLayout>
+                                <u:FileUploader id="fileUploader" name="myFileUpload" tooltip="Upload your file to the local server" uploadComplete="handleUploadComplete" uploadUrl="/sap/opu/odata/sap/Z_SERVICE_EXP_REPORT_V2/Upload" useMultipart="false"/>
+								   <Button text="Upload File" press="handleUploadPress"/>
+                            </layout:VerticalLayout>
+                        </layout:HorizontalLayout>
+                        <layout:HorizontalLayout>
+                            <Button text="template" press=".GetTemplate"/>   
+                            <Button press=".onPress2" text="test" />  
+                        </layout:HorizontalLayout>
+                    </FlexBox>
+                </f:content>
+            </f:DynamicPageHeader>
+        </f:header>        
+        <f:content>
+        
+            
+             </f:content>
+    </f:DynamicPage>
+</mvc:View>
